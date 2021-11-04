@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon/white-bootstrap.png">
+    <title>63070132 | Project 2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div id="header" class="row d-flex justify-content-center align-items-center position-relative">
+
+            <div class="col-xxl-6 col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 d-flex flex-wrap">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 d-flex justify-content-center align-items-center"
+                    data-aos="flip-left" data-aos-duration="2000">
+                    <img src="icon/bootstrap-5.svg" class="pe-3" height="200px">
+                </div>
+                <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                    <div class="text-header-primary text-nowrap" data-aos="fade-left" data-aos-duration="1000">Bootstrap
+                        5</div>
+                    <div class="text-header-secondary" data-aos="fade-left" data-aos-duration="1500"><code
+                            style="font-size: 1.25em; color: #63B4B8">CSS</code> Framework</div>
+                </div>
+            </div>
+
+            <div class="text-header-describetion mt-5" data-aos="zoom-in" data-aos-duration="1200">
+                <span>Create for educating about bootstrap 5 by⁨︎
+                    <a href="https://github.com/panupongkeawkam" target="_blank" class="text-decoration-underline">
+                        Panupong Keawkam (63070132)
+                    </a>
+                </span>
+                <span style="font-size: .8em;">King Mongkut's Institute of Technology Ladkrabang - Information
+                    Technology</span>
+            </div>
+
+        </div>
+
+        <div id="navigatorTop" class="row p-2 mb-3 w-100 shadow justify-content-center">
+
+            <div class="col-xxl-6 col-xl-8 col-lg-10 col-md-12 col-sm-12 d-flex justify-content-evenly">
+                <div class="col-auto">
+                    <div class="dropdown-toggle p-1" data-bs-toggle="dropdown">Introduce</div>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('overview')">Overview</li>
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('references')">References</li>
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('setup')">Setup</li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <div class="dropdown-toggle p-1" data-bs-toggle="dropdown">Layouts</div>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('containerResponsive')">Container &
+                            Responsive
+                        </li>
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('gridsLayout')">Grids & Layout</li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <div class="dropdown-toggle p-1" data-bs-toggle="dropdown">Properties</div>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('utilities')">Utilities</li>
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('backgroundColors')">Background & Colors
+                        </li>
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('borderShadow')">Border & Shadow</li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <div class="dropdown-toggle p-1" data-bs-toggle="dropdown">Events & Table</div>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('table')">Table</li>
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('forms')">Forms</li>
+                        <li class="dropdown-menu-btn m-0 p-3" onclick="linkTo('navsTabs')">Navs & Tabs</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row d-flex justify-content-center content-container">
+
+            <div class="col-xxl-2 col-xl-1 col-0">
+                <div id="navigatorSide" class="text-light pt-3 position-sticky top-0 d-xxl-flex d-none">
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('overview')" style="--btn-color: #0d6efd">
+                        Overview</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('references')" style="--btn-color: #0d6efd">
+                        References</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('setup')" style="--btn-color: #0d6efd">
+                        Setup</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('containerResponsive')"
+                        style="--btn-color: #198754">
+                        Containers & Responsive</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('gridsLayout')" style="--btn-color: #198754">
+                        Grids & Layout</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('utilities')" style="--btn-color: #dc3545">
+                        Utilities</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('backgroundColors')"
+                        style="--btn-color: #dc3545">
+                        Background & Colors</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('borderShadow')"
+                        style="--btn-color: #dc3545">
+                        Border & Shadow</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('table')" style="--btn-color: #ffc107">
+                        Table</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('forms')" style="--btn-color: #ffc107">
+                        Forms</a>
+                    <a class="navigator-side-btn mb-2 p-3" onclick="linkTo('navsTabs')" style="--btn-color: #ffc107">
+                        Navs & Tabs</a>
+                </div>
+            </div>
+
+            <div class="col-xxl-8 col-xl-10 col-12 px-lg-4">
+
+                <div id="overview" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Overview</h1>
+                    <p class="mb-2"><b>Bootstrap version 5.x.x</b> คือ CSS Framework
+                        ที่ช่วยในการออกแบบและปรับแต่งไซต์ได้อย่างรวดเร็วและสามารถจัดการกับ Responsive Website
+                        ได้อย่างง่ายดาย โดยลดขั้นตอนการเขียนโค้ดในส่วน CSS ลงอย่างมากพร้อมทั้งมีการปรับแต่ง style
+                        หรือลูกเล่นการใช้ script มาให้พร้อมใช้งานได้ทันทีผ่านการเรียก class หรือ attribute</p>
+                    <p>ซึ่ง Bootstrap เป็นชุดเครื่องมือโอเพนซอร์สส่วนหน้ายอดนิยมของโลก ซึ่งประกอบด้วยตัวแปร Sass
+                        และปลั๊กอิน JavaScript</p>
+                    <h2>ช่วยได้มากแค่ไหน?</h2>
+                    <p>หลักๆ นั้น Bootstrap จะช่วยลดการเขียนในส่วนของ style ลง โดยการเรียกใช้ style จะเรียกผ่าน class
+                        ต่างๆ ที่มีมาให้ ร่วมไปถึงการที่ตัว Bootstrap class บาง class มีการปรับแต่งตัว style
+                        เพิ่มเติมที่ทำให้ใช้งานในเหมาะสมยิ่งขึ้นและนอกจากนั้นยังมีการที่สามารถเรียกใช้งานตัวของลูกเล่น
+                        JavaScript ผ่าน attribute ของตัว tags เองได้เลย</p>
+                    <p>และในส่วนของตัวอย่างการใช้งานคล่าวๆ ของการปรับแต่ง style โดย Bootstrap โดยเพียงเรียกผ่าน class
+                        ดังด้านล่าง</p>
+                    <h3>Normal CSS:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;body&gt;<br>&nbsp;&nbsp;&lt;div class="container"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="row"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="column-3 text-w-center bg-blue"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;content&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="column-3 text-w-center bg-red"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;content&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="column-3 text-w-center bg-skyblue"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;content&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&lt;/body&gt;<br><br>&lt;style&gt;<br>&nbsp;&nbsp;body {<br>&nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>&nbsp;&nbsp;&nbsp;&nbsp;height: auto;<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;.container {<br>&nbsp;&nbsp;&nbsp;&nbsp;width: 1320px;<br>&nbsp;&nbsp;&nbsp;&nbsp;height: auto;<br>&nbsp;&nbsp;&nbsp;&nbsp;margin: auto;<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;.row {<br>&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>&nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;&nbsp;&nbsp;flex-direction: row;<br>&nbsp;&nbsp;&nbsp;&nbsp;flex-wrap: wrap;<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;.column-3 {<br>&nbsp;&nbsp;&nbsp;&nbsp;width: 33.33%;<br>&nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>&nbsp;&nbsp;&nbsp;&nbsp;padding: 3rem;<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;.text-w-center {<br>&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>&nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;.bg-blue {<br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #0d6efd;<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;.bg-red {<br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #dc3646;<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;.bg-skyblue {<br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #0dcaf0;<br>&nbsp;&nbsp;}<br>&lt;/style&gt;</code>
+                    </div>
+                    <h3><br>Bootstrap:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span">
+                        <code
+                            class="text-white">&lt;body&gt;<br>&nbsp;&nbsp;&lt;div class="container"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="row"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col bg-primary p-5 text-white text-center"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;content&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col bg-danger p-5 text-white text-center"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;content&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col bg-info p-5 text-white text-center"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;content&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&lt;/body&gt;<br><br>&lt;style&gt;&lt;/style&gt;<br></code>
+                    </div>
+                    <h3><br>Result:</h3>
+                    <div class="row m-0">
+                        <img src="image/overview-result.png" class="img-shadow">
+                    </div>
+                    <h2><br><br>จากผลลัพธ์</h2>
+                    <p>จะเห็นได้ว่าการใช้ Bootstrap จะทำให้เขียนโค้ดสั้นลงมาก และลดขั้นตอนบางอย่างไป
+                        และนี่เป็นเพียงตัวอย่างเพียงแค่เบื้องหน้า ยังมีในส่วนของ Responsive ที่ตัว Bootstrap
+                        ตั้งค่ามาให้อัตโนมัติ ส่วนรายละเอียดอื่นๆ ของการใช้งาน Bootstrap
+                        สามารถศึกษาเพิ่มเติมได้ด้านล่างของเว็บไซต์นี้เลย</p>
+                </div>
+
+                <div id="references" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1 class="mb-5">References</h1>
+                    <ul>
+                        <li class="fs-3 text-primary text-decoration-underline"><a href="https://getbootstrap.com/"
+                                target="_blank">https://getbootstrap.com/</a></li>
+                        <li class="fs-3 text-primary text-decoration-underline"><a
+                                href="https://www.w3schools.com/bootstrap5/"
+                                target="_blank">https://www.w3schools.com/bootstrap5/</a></li>
+                    </ul>
+                    <h2>Video Tutorial</h2>
+                    <div class="ratio ratio-16x9 m-0 w-100">
+                        <iframe class="rounded" src="https://www.youtube.com/embed/El7FovOjfjE"
+                            allowfullscreen></iframe>
+                    </div>
+                    <h2><br>ตัวอย่างเว็บไซต์ที่ใช้งาน Bootstrap 5</h2>
+                    <div class="row m-0 g-3 mb-5">
+                        <div class="col-xxl-6 col-xl-6 col-12">
+                            <img src="image/thisisneat.png" width="100%" class="web-span rounded"
+                                onclick="window.open('https://thisisneat.com.au/')">
+                            <figcaption class="figure-caption text-end">thisisneat.com.au</figcaption>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-12">
+                            <img src="image/cozar.png" width="100%" class="web-span rounded"
+                                onclick="window.open('https://cozar.me/')">
+                            <figcaption class="figure-caption text-end">cozar.me</figcaption>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-12">
+                            <img src="image/memory.png" width="100%" class="web-span rounded"
+                                onclick="window.open('https://memory.ai/timely')">
+                            <figcaption class="figure-caption text-end">memory.ai</figcaption>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-12">
+                            <img src="image/fliplingo.png" width="100%" class="web-span rounded"
+                                onclick="window.open('https://www.fliplingo.com/')">
+                            <figcaption class="figure-caption text-end">fliplingo.com</figcaption>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="setup" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Setup</h1>
+                    <p>ก่อนที่จะทำการศึกษา ก็จะมาแนะนำการ Download และ Setup Bootstrap ในตัว Project ของคุณก่อน โดยในการ
+                        Setup สามารถทำได้ 2 วิธีคือ
+                    <ol>
+                        <li>Dowload Source Code ลงเครื่อง</li>
+                        <li>Link โดย jsDelivr ผ่าน URL</li>
+                    </ol>
+                    </p>
+                    <h2 class="display-6">Download to local</h2>
+                    <p class="mb-2" style="text-indent: 0px;">เมื่อ Download เสร็จ สามารถเรียกใช้งานได้โดย link ไปที่
+                        path ที่มีไฟล์ bootstrap.min.css และ bootstrap.min.js</p>
+                    <div class="col-4 mb-4">
+                        <button class="btn custom-btn shadow-sm">Download</button>
+                    </div>
+                    <hr>
+                    <h2 class="display-6">Link from jsDelivr</h2>
+                    <p class="mb-2" style="text-indent: 0px;">ในส่วนของ jsDelivr สามารถ copy code ส่วนนี้ไปวางไว้ยังไฟล์
+                        *.html หรือ *.php ได้เลย</p>
+                    <div class="code-span bg-transparent my-3">
+                        <code
+                            class="text-nowrap text-purple">&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"&gt;<br>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"&gt;&lt;/script&gt;</code>
+                    </div>
+                    <div class="col-4 mb-4">
+                        <button class="btn custom-btn shadow-sm">Copy to clipboard</button>
+                    </div>
+                </div>
+
+                <div id="containerResponsive" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Containers & Responsive</h1>
+                    <p>Container เป็นส่วนประกอบพื้นฐานของ Bootstrap ที่บรรจุตัว element ลูกไว้ เป็นการ set
+                        ขอบเข็ตของตัวเว็บไซ์
+                        และสามารถจัดการกับ Responsive และ Viewport ของเว็บไซต์ตามที่กำหนด</p>
+                    <h2>ทำงานอย่างไร?</h2>
+                    <p>Container หรือชื่อ class คือ <code>.container-*</code>
+                        เป็นการกำหนดขอบเขตของเว็บไซต์โดยจะกำหนดให้กับ
+                        element tag ที่ใหญ่ที่สุดเว็บไซต์ (รองจาก <code>&lt;body&gt;</code>) โดย property ใน
+                        <code>.container-*</code> จะเป็นกำหนด <code>width:</code> ตาม class container
+                        แต่ละแบบและกำหนดเป็น
+                        <code>height: auto;</code> โดยจะอธิบาย container แต่ละประเภทดังนี้
+                    </p>
+                    <ul class="mb-5">
+                        <li><code class="text-purple">.container</code> จะเป็นกำหนด <code>width:</code>
+                            ตามขนาดหน้าจอต่างๆ แบบอัตโนมัติ</li>
+                        <li><code class="text-purple">.container-fluid</code> จะกำหนดให้ทุกขนาดหน้าจอเป็น
+                            <code>width: 100%;</code> ทั้งหมด
+                        </li>
+                        <li><code class="text-purple">.container-{ขนาดหน้าจอ}</code> จะกำหนดให้
+                            <code>width: 100%;</code> ก็ต่อเมื่อถึงขนาดจอที่เลือกไว้
+                        </li>
+                    </ul>
+                    <p class="mb-0">ในส่วนของ <code class="text-purple">.container</code> ในแบบต่างๆ จะมีชื่อ class
+                        และการ breakpoint
+                        อิงตามตารางด้านล่างดังนี้</p>
+                    </p>
+                    <table class="table table-bordered table-light rounded">
+                        <tr>
+                            <th class="w-25">ชื่อ class</th>
+                            <th>Extra small<br>
+                                &lt;576px</th>
+                            <th>Small<br>
+                                ≥576px</th>
+                            <th>Medium<br>
+                                ≥768px</th>
+                            <th>Large<br>
+                                ≥992px</th>
+                            <th>X-Large<br>
+                                ≥1200px</th>
+                            <th>XX-Large<br>
+                                ≥1400px</th>
+                        </tr>
+
+                        <tr>
+                            <td><code>.container</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 540px</code></td>
+                            <td><code class="text-dark">width: 720px</code></td>
+                            <td><code class="text-dark">width: 960px</code></td>
+                            <td><code class="text-dark">width: 1140px</code></td>
+                            <td><code class="text-dark">width: 1320px</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>.container-sm</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 540px</code></td>
+                            <td><code class="text-dark">width: 720px</code></td>
+                            <td><code class="text-dark">width: 960px</code></td>
+                            <td><code class="text-dark">width: 1140px</code></td>
+                            <td><code class="text-dark">width: 1320px</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>.container-md</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 720px</code></td>
+                            <td><code class="text-dark">width: 960px</code></td>
+                            <td><code class="text-dark">width: 1140px</code></td>
+                            <td><code class="text-dark">width: 1320px</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>.container-lg</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 960px</code></td>
+                            <td><code class="text-dark">width: 1140px</code></td>
+                            <td><code class="text-dark">width: 1320px</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>.container-xl</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 1140px</code></td>
+                            <td><code class="text-dark">width: 1320px</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>.container-xxl</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 1320px</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>.container-fluid</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                            <td><code class="text-dark">width: 100%</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="gridsLayout" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Grids & Layout</h1>
+                    <p>การจัดวาง element ของ Bootstrap จะเป็นกำหนดเป็น row และ column โดยในส่วนของ column
+                        จะสามารถกำหนดขนาดความกว้างได้ และในการใช้งานตัว column จะเป็น element ลูกของ row เสมอ
+                        และในส่วนของความสูงของ row หรือ
+                        column จะขึ้นอยู่กับความสูง (<code>height:</code>) ของเนื้อหาหรือ element ภายในอีกที</p>
+                    <h2>Row</h2>
+                    <p>Row จะมีชื่อ class ใน Bootstrap ว่า <code>.row</code> จะมีการกำหนด property เป็น
+                        <code>width: 100%;</code> ตาม element แม่ โดยจะมีจัดวาง element เป็นแนวแถว (row) และเมื่อ
+                        element ภายในเกินขอบเขตของตัวมัน มันจะขึ้นเป็นแถวใหม่ให้
+                    </p>
+                    <h2>Column</h2>
+                    <p>Column จะมีชื่อ class ใน Bootstrap ว่า <code>.col</code> โดย <code>.col</code>
+                        จะสามารถกำหนดความกว้างเองได้หรือว่าจะหารความกว้างตามจำนวน <code>.col</code> ใน <code>.row</code>
+                        ก็ได้<br><br>
+                        นอกจากนี้ยังสามารถกำหนดความกว้างที่ต้องการตามขนาดของหน้าจอตอนแสดงผลได้ และสามารถกำหนด column
+                        แบบต่างๆ ตามชื่อ class ได้ดังนี้
+                    </p>
+                    <ul>
+                        <li><code>.col</code> จะหารความกว้างตามจำนวนของ <code>.col</code> ภายใน <code>.row</code></li>
+                        <li><code>.col-{ความกว้างเป็นสัดส่วน (0 - 12)}</code> จะกำหนดความกว้างเป็น 12 ส่วนตามเลขที่กำหนด
+                            ของ <code>.row</code> (จะขึ้นแถวใหม่หากเกิน 12)</li>
+                        <li><code>.col-{ขนาดหน้าจอ}-{ความกว้างเป็นสัดส่วน (0 - 12)}</code> column
+                            จะถูกกำหนดเป็นความกว้างที่กำหนดก็ต่อเมื่อถึง breakpoint ของขนาดหน้าจอนั้นๆ</li>
+                    </ul>
+                    <h3>Code:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span">
+                        <code
+                            class="text-light">&lt;div class="container"&gt;<br>&nbsp;&nbsp;&lt;div class="row"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-xxl-4 col-sm-12"&gt;.col-xxl-4 col-sm-12&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-xxl-4 col-sm-12"&gt;.col-xxl-4 col-sm-12&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-xxl-4 col-sm-6"&gt;.col-xxl-4 col-sm-6&lt;/div&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;div class="row"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-8"&gt;.col-8&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-2"&gt;.col-2&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-1"&gt;.col-1&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-1"&gt;.col-1&lt;/div&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;div class="row"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;︎&lt;div class="col"&gt;.col&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-6"&gt;.col-6&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col"&gt;.col&lt;/div&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&lt;/div&gt;<br></code>
+                    </div>
+                    <h3><br>Result:<br>
+                        <span class="fs-5">&lt;!-- อาจมีการปรับแต่ง element เพื่อให้เห็นผลลัพธ์ง่ายขึ้น
+                            (หากต้องการดูผลลัพธ์ของจริงสามารถนำไป code ไป run ได้) --&gt;</span>
+                    </h3>
+                    <div class="row m-0">
+                        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                            <img src="image/grid-xxl-result.png" width="100%" class="img-shadow">
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                            <img src="image/grid-sm-result.png" width="100%" class="img-shadow">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="utilities" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Utilities</h1>
+                    <p>ในส่วนของ Utilities หรือการจัดวางระยะห่างของเนื้อหาภายใน (<code>padding:</code>),
+                        การจัดระยะห่างของตัว element (<code>margin:</code>) Bootstrap ก็จะทำให้ง่ายขึ้นด้วยเช่นกัน
+                        โดยจะลดการเขียนในส่วนของ style
+                        ลง ซึ่งจะเขียนในรูปแบบของ class แทน</p>
+                    <h2>Margin & Padding</h2>
+                    <p>ในการกำหนด <code>margin:</code> ของ Bootstrap จะใช้ ตัวย่อ '<code>m</code>' และเช่นเดียวกับ
+                        <code>padding:</code> ซึ่งจะใช้ตัวย่อ '<code>p</code>' และตามด้วยค่าที่ต้องการ
+                        โดยจะสามารถกำหนดทิศทางของ <code>margin:</code> และ <code>padding:</code> ได้เช่นกัน
+                        และนอกจากนั้นยังสามารถกำหนด <code>margin:</code> และ <code>padding:</code>
+                        ตามการแสดงผลหน้าจอได้เช่นเดียวกัน<br><br>
+                        โดยจะเขียนเป็น class ตามการกำหนดต่างๆ ได้ดังนี้
+                    <ul>
+                        <li><code>.m-{ค่า 0-5}</code> กำหนดการจัดระยะห่างของตัว
+                            element <b>รอบทิศทาง</b>เป็นค่าที่ต้องการ <i>(e.g. <code>m-3</code>, <code>m-5</code>)</i>
+                        </li>
+                        <li><code>.p-{ค่า 0-5}</code>
+                            กำหนดการจัดวางระยะห่างของเนื้อหาภายใน<b>รอบทิศทาง</b>เป็นค่าที่ต้องการ <i>(e.g.
+                                <code>p-2</code>, <code>p-0</code>)</i></li>
+                        <li><code>.{m, p}-{ขนาดการแสดงผลหน้าจอ}-{ค่า 0-5}</code> กำหนดการจัดระยะห่างของตัว
+                            element หรือระยะห่างของเนื้อหาภายใน<b>รอบทิศทาง</b>ตามค่าที่กำหนด
+                            เมื่อถึงขนาดการแสดงผลหน้าจอที่ต้องการ <i>(e.g. <code>m-xxl-3</code>,
+                                <code>p-sm-4</code>)</i></li>
+                        <li><code>.{m, p}t-{ค่า 0-5}</code> กำหนดการจัดระยะห่างของตัว
+                            element หรือระยะห่างของเนื้อหาภายใน<b>ส่วนบน</b>เป็นค่าที่ต้องการ <i>(e.g.
+                                <code>mt-3</code>)</i></li>
+                        <li><code>.{m, p}e-{ค่า 0-5}</code> กำหนดการจัดระยะห่างของตัว
+                            element หรือระยะห่างของเนื้อหาภายใน<b>ส่วนขวา</b>เป็นค่าที่ต้องการ <i>(e.g.
+                                <code>pe-5</code>)</i></li>
+                        <li><code>.{m, p}b-{ค่า 0-5}</code> กำหนดการจัดระยะห่างของตัว
+                            element หรือระยะห่างของเนื้อหาภายใน<b>ส่วนล่าง</b>เป็นค่าที่ต้องการ <i>(e.g.
+                                <code>pb-3</code>)</i></li>
+                        <li><code>.{m, p}s-{ค่า 0-5}</code> กำหนดการจัดระยะห่างของตัว
+                            element หรือระยะห่างของเนื้อหาภายใน<b>ส่วนซ้าย</b>เป็นค่าที่ต้องการ <i>(e.g.
+                                <code>ms-2</code>)</i></li>
+                        <li><code>.{m, p}{ทิศทาง}-{ขนาดการแสดงผลหน้าจอ}-{ค่า 0-5}</code> กำหนดการจัดระยะห่างของตัว
+                            element หรือระยะห่างของเนื้อหาภายใน<b>ตามทิศทางที่กำหนด</b>และตามค่าที่กำหนด
+                            เมื่อถึงขนาดการแสดงผลหน้าจอที่ต้องการ <i>(e.g. <code>mt-xl-5</code>, <br>
+                                <code>pe-md-2</code>)</i></li>
+                    </ul>
+                    </p>
+                    <p class="mb-3" style="text-indent: 0px;">โดยหน่วยของค่า 0-5 จะเป็นดั่งตารางด้านล่าง</p>
+                    <table class="table table-bordered table-light rounded w-auto">
+                        <tr>
+                            <th>ชื่อ class ตาม Bootstrap</th>
+                            <th>CSS value</th>
+                        </tr>
+                        <tr>
+                            <td><code>.m-0</code> <code>.p-0</code></td>
+                            <td><code class="text-dark">margin: 0rem; padding: 0rem;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.m-1</code> <code>.p-1</code></td>
+                            <td><code class="text-dark">margin: 0.25rem; padding: 0.25rem;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.m-2</code> <code>.p-2</code></td>
+                            <td><code class="text-dark">margin: 0.5rem; padding: 0.5rem;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.m-3</code> <code>.p-3</code></td>
+                            <td><code class="text-dark">margin: 1rem; padding: 1rem;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.m-4</code> <code>.p-4</code></td>
+                            <td><code class="text-dark">margin: 1.5rem; padding: 1.5rem;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.m-5</code> <code>.p-5</code></td>
+                            <td><code class="text-dark">margin: 3rem; padding: 3rem;</code></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="backgroundColors" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Background & Colors</h1>
+                    <p class="mb-3">ใน Bootstrap ยังมีการกำหนดสีพื้นหลัง (<code>background-color:</code>), สีตัวอักษร
+                        (<code>color:</code>) มาให้ผ่านการเรียกใช้ class โดยสีที่กำหนดมาจะเป็นสีที่ค่อนข้างพื้นฐาน
+                        โดยอาจจะไม่ได้มีความยึดหยุ่นในการใช้แต่ก็เป็นตัวเลือกในการแยกสีใน element
+                        ได้อย่างรวดเร็ว<br><br>
+                        <span id="colorTable">โดยค่าของสีต่างๆ ของ Bootstrap มีดังตารางด้านล่างนี้</span>
+                    </p>
+                    <table class="table table-bordered table-light rounded w-75 mb-5">
+                        <tr>
+                            <th>ชื่อ class</th>
+                            <th>ค่าสี (Hex)</th>
+                        </tr>
+                        <tr>
+                            <td><code>.*-primary</code></td>
+                            <td><code style="color: #0d6efd;">#0d6efd</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.*-secondary</code></td>
+                            <td><code style="color: #6c757d;">#6c757d</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.*-success</code></td>
+                            <td><code style="color: #198754;">#198754</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.*-danger</code></td>
+                            <td><code style="color: #dc3545;">#dc3545</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.*-warning</code></td>
+                            <td><code style="color: #ffc107;">#ffc107</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.*-info</code></td>
+                            <td><code style="color: #0dcaf0;">#0dcaf0</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.*-light</code></td>
+                            <td><code style="color: #f8f9fa; background: #000a;">#f8f9fa</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.*-dark</code></td>
+                            <td><code style="color: #212529;">#212529</code></td>
+                        </tr>
+                    </table>
+                    <h2>สีพื้นหลัง</h2>
+                    <p class="mb-3">ในส่วนของสีพื้นหลัง (<code>background-color:</code>) จะมีการใช้ลูกเล่นการไล่สี
+                        (gradient)
+                        เพิ่มเข้ามาโดยไม่จำเป็นต้องตั้งค่าการไล่สีเอง โดยในการเขียนชื่อ class จะเป็นดังด้านล่าง</p>
+                    <ul>
+                        <li><code>.bg-{ชื่อของสี}</code> จะกำหนด <code>background-color:</code> เป็นสีที่ต้องการ</li>
+                        <li><code>.bg-gradient</code></li>
+                    </ul>
+                    <h2><br>สีตัวอักษร</h2>
+                    <p class="mb-3">สีตัวอักษรจะสีค่าสีที่เหมือนกันกับ <code>.bg-*</code> และยังสามารถกำหนด
+                        <code>opacity:</code>
+                        ของตัวอักษรได้ แต่ได้เพียงแค่ 50%
+                    </p>
+                    <ul>
+                        <li><code>.text-{ชื่อของสี}</code> จะกำหนด <code>color:</code> เป็นสีที่ต้องการ</li>
+                        <li><code>.text-{ชื่อของสี}-50</code> จะกำหนด <code>color:</code>
+                            เป็นสีที่ต้องการและให้ความโปร่งแสงของข้อความเป็น 50%</li>
+                    </ul>
+                </div>
+
+                <div id="borderShadow" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Border & Shadow<br><br></h1>
+                    <h2>กรอบ (Border)</h2>
+                    <p class="mb-3">ในการกำหนดกรอบ (<code>border:</code>) ก็สามารถกำหนดได้ผ่านการเรียก class
+                        เช่นเดียวกัน
+                        ไม่ว่าจะเป็นทิศทางกรอบ ความหนา ขอบมน หรือค่าสีของกรอบ ซึ่งในค่าสีของกรอบก็อิงตาม <a
+                            onclick="linkTo('colorTable')" class="text-primary text-decoration-underline">ตารางสี</a>
+                        เดียวกับการกำหนดสีพื้นหลังหรือสีข้อความ<br><br>
+                        โดยจะเขียนชื่อ class เพื่อกำหนด properties ต่างๆ ได้ดังนี้
+                    </p>
+                    <ul>
+                        <li><code>.border</code> กำหนดกรอบของ element <b>รอบทิศทาง</b></li>
+                        <li><code>.border-{ค่า 0-5}</code> กำหนด<b>ความหนา</b>กรอบของ element เป็นค่าที่กำหนด</li>
+                        <li><code>.border-top</code> กำหนดกรอบของ element <b>ด้านบน</b></li>
+                        <li><code>.border-end</code> กำหนดกรอบของ element <b>ด้านขวา</b></li>
+                        <li><code>.border-bottom</code> กำหนดกรอบของ element <b>ด้านล่าง</b></li>
+                        <li><code>.border-start</code> กำหนดกรอบของ element <b>ด้านซ้าย</b></li>
+                        <li><code>.border-{ชื่อของสี}</code> กำหนด<b>สี</b>กรอบของ element ตามชื่อสีดัง<a
+                                onclick="linkTo('colorTable')"
+                                class="text-primary text-decoration-underline">ตารางสี</a></li>
+                        <li><code>.rounded-{ค่า 0-3 หรือ ลักษณะความมน}</code> กำหนด<b>ความมน</b>ของกรอบ element
+                            (<code>border-radius:</code>)
+                            เป็นค่าที่กำหนด
+                        </li>
+                    </ul>
+                    <h3>Code Example:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;!-- row 1 --&gt;<br>&lt;div class="border"&gt;.border&lt;/div&gt;<br>&lt;div class="border-top border-bottom"&gt;.border-top .border-bottom&lt;/div&gt;<br>&lt;div class="border-4 border-start border-bottom"&gt;.border-4 .border-start .border-bottom&lt;/div&gt;<br>&lt;div class="border border-5 rounded-3"&gt;.border .border-5 .rounded-3&lt;/div&gt;<br>&lt;div class="border rounded-circle"&gt;.border .rounded-circle&lt;/div&gt;<br><br>&lt;!-- row 2 --&gt;<br>&lt;div class="border border-3 border-primary"&gt;.border .border-3 .border-primary&lt;/div&gt;<br>&lt;div class="border border-3 border-danger"&gt;.border .border-3 .border-danger&lt;/div&gt;<br>&lt;div class="border border-3 border-success"&gt;.border .border-3 .border-success&lt;/div&gt;<br>&lt;div class="border border-3 border-warning"&gt;.border .border-3 .border-warning&lt;/div&gt;<br>&lt;div class="border border-3 border-dark"&gt;.border .border-3 .border-dark&lt;/div&gt;<br></code>
+                    </div>
+                    <h3><br>Result:</h3>
+                    <div class="row m-0">
+                        <img src="image/border-result.png" class="img-shadow">
+                    </div>
+
+                    <h2><br>เงา (Shadow)</h2>
+                    <p class="mb-3">ในส่วนของเงาใน Bootstrap จะไม่ได้มีการกำหนดที่ละเอียดสักเท่าไหร่
+                        โดยจะกำหนดแค่ขนาดของเงาเท่านั้น<br><br>
+                        โดยจะเขียนชื่อ class เพื่อกำหนดขนาดเงาได้ดังนี้
+                    </p>
+                    <ul>
+                        <li><code>.shadow</code> กำหนดเงาของ element เป็น<b>ขนาดกลาง</b></li>
+                        <li><code>.shadow-sm</code> กำหนดเงาของ element เป็น<b>ขนาดเล็ก</b></li>
+                        <li><code>.shadow-lg</code> กำหนดเงาของ element เป็น<b>ขนาดใหญ่</b></li>
+                        <li><code>.shadow-none</code> กำหนดให้<b>ไม่มี</b>เงาใน element</li>
+                    </ul>
+                    <h3>Code Example:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;div class="shadow-none"&gt;.shadow-none&lt;/div&gt;<br>&lt;div class="shadow-sm"&gt;.shadow-sm&lt;/div&gt;<br>&lt;div class="shadow"&gt;.shadow&lt;/div&gt;<br>&lt;div class="shadow-lg"&gt;.shadow-lg&lt;/div&gt;<br></code>
+                    </div>
+                    <h3><br>Result:</h3>
+                    <div class="row m-0">
+                        <img src="image/shadow-result.png" class="img-shadow">
+                    </div>
+                </div>
+
+                <div id="table" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Table</h1>
+                    <p class="mb-3">การใช้ class จาก Bootstrap ในการแสดงผลตาราง
+                        ถือว่าค่อนข้างที่จะลดความซับซ้อนของโค้ดไปเยอะมาก
+                        เนื่องจากการสร้างตารางของภาษา html ค่อนข้างจะกำหนด style ที่ยุ่งยาก ซึ่ง Bootstrap ก็มี class
+                        ที่ใช้เพียงแค่ไม่กี่ class ก็สามารถที่จะทำให้ตารางออกมาดูสวยและมี Responsive อีกด้วย<br><br>
+                        ซึ่งชื่อ class ต่างๆ และผลลัพธ์ที่ได้จะเป็นดังนี้
+                    </p>
+                    <ul>
+                        <li><code>.table</code> กำหนดโครงสร้างตารางที่เหมาะสมขึ้นมาโดยจะกำหนด property มาให้อัตโนมัติ
+                            (จำเป็นต้องใช้กับ tag <code>&lt;table&gt;</code>)</li>
+                        <li><code>.table-bordered</code> กำหนดให้ตาราง<b>มีเส้นขั้น</b>ในทุก cell</li>
+                        <li><code>.table-borderless</code> กำหนดให้ตาราง<b>ไม่มีเส้นขั้น</b>ในทุก cell</li>
+                        <li><code>.table-striped</code> กำหนดให้สีของแต่ละ row มีความโปร่งแสงของพื้นหลังที่สลับกันไป
+                        </li>
+                        <li><code>.table-{ชื่อของสี}</code> กำหนดสีของตารางโดยชื่อสีอิงตาม<a
+                                onclick="linkto('colorTable')"
+                                class="text-primary text-decoration-underline">ตารางสี</a></li>
+                    </ul>
+
+                    <h3><br>Code:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;table class="table"&gt;<br>&nbsp;&nbsp;&lt;thead&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Title1&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Title2&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Title3&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;/thead&gt;<br>&nbsp;&nbsp;&lt;tbody&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;︎ &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 00&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 01&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 02&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 10&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 11&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 12&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;/tbody&gt;<br>&lt;/table&gt;<br></code>
+                    </div>
+                    <h3><br>Result:</h3>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Title1</th>
+                                    <th>Title2</th>
+                                    <th>Title3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 00</td>
+                                    <td>Cell 01</td>
+                                    <td>Cell 02</td>
+                                </tr>
+                                <tr>
+                                    <td>Cell 10</td>
+                                    <td>Cell 11</td>
+                                    <td>Cell 12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr class="my-5 w-75 mx-auto">
+
+                    <h3><br>Code:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;table class="table table-bordered table-info"&gt;<br>&nbsp;&nbsp;&lt;thead&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Title1&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;︎&lt;th&gt;Title2&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Title3&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;/thead&gt;<br>&nbsp;&nbsp;︎&lt;tbody&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 00&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 01&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;︎&lt;td&gt;Cell 02&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 10&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;︎&lt;td&gt;Cell 11&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 12&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;/tbody&gt;<br>&lt;/table&gt;<br></code>
+                    </div>
+                    <h3><br>Result:</h3>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <table class="table table-bordered table-warning">
+                            <thead>
+                                <tr>
+                                    <th>Title1</th>
+                                    <th>Title2</th>
+                                    <th>Title3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 00</td>
+                                    <td>Cell 01</td>
+                                    <td>Cell 02</td>
+                                </tr>
+                                <tr>
+                                    <td>Cell 10</td>
+                                    <td>Cell 11</td>
+                                    <td>Cell 12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr class="my-5 w-75 mx-auto">
+
+                    <h3><br>Code:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;table class="table table-striped table-borderless table-dark"&gt;<br>&nbsp;&nbsp;&lt;thead&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Title1&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Title2&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Title3&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;/thead&gt;<br>&nbsp;&nbsp;&lt;tbody&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 00&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 01&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 02&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 10&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 11&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cell 12&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;/tbody&gt;<br>&lt;/table&gt;<br></code>
+                    </div>
+                    <h3><br>Result:</h3>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <table class="table table-striped table-borderless table-dark">
+                            <thead>
+                                <tr>
+                                    <th>Title1</th>
+                                    <th>Title2</th>
+                                    <th>Title3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 00</td>
+                                    <td>Cell 01</td>
+                                    <td>Cell 02</td>
+                                </tr>
+                                <tr>
+                                    <td>Cell 10</td>
+                                    <td>Cell 11</td>
+                                    <td>Cell 12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="forms" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Forms</h1>
+                    <p>อีกหนึ่งประเภทของ content ก็คือการรับค่าในประเภทต่างๆ ผ่านผู้ใช้ซึ่ง ในการที่จะกำหนดค่า property
+                        เองทั้งหมดก็คงจะยุ่งยาก Bootstrap นั้นมีเครื่องมือในการจัดรูปแบบการแสดงผล forms ในรูปแบบต่างๆ
+                        โดยใช้เพียงแค่การกำหนด class หรือ attribute อีกเช่นเคย<br><br>
+                        ซึ่งในการที่จะอธิบายการทำงานของทุก class ก็จะเข้าใจได้ยาก
+                        การที่ได้เห็นผลลัพธ์ควบคู่ไปกับโค้ดคงจะเข้าใจได้ดียิ่งกว่า
+                    </p>
+                    <h2>Text field & Text area</h2>
+                    <div class="row mx-0 my-4 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;div class="mb-3"&gt;<br>&nbsp;&nbsp;&lt;label for="exampleFormControlInput1" class="form-label"&gt;Email address&lt;/label&gt;<br>&nbsp;&nbsp;&lt;input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"&gt;<br>&lt;/div&gt;<br>&lt;div class="mb-3"&gt;<br>&nbsp;&nbsp;&lt;label for="exampleFormControlTextarea1" class="form-label"&gt;Example textarea&lt;/label&gt;<br>&nbsp;&nbsp;&lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="3"&gt;&lt;/textarea&gt;<br>&nbsp;&nbsp;&lt;input class="btn btn-primary mt-3" type="submit" value="Submit"&gt;<br>&lt;/div&gt;<br></code>
+                    </div>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <input class="btn btn-primary mt-3" type="submit" value="Submit">
+                        </div>
+                    </div>
+
+                    <h2><br>File input</h2>
+                    <div class="row m-0 my-4 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;div class="mb-3"&gt;<br>&nbsp;&nbsp;&lt;label for="formFile" class="form-label"&gt;Default file input example&lt;/label&gt;<br>&nbsp;&nbsp;&lt;input class="form-control" type="file" id="formFile"&gt;<br>&lt;/div&gt;<br>&lt;div class="mb-3"&gt;<br>&nbsp;&nbsp;&lt;label for="formFileMultiple" class="form-label"&gt;Multiple files input example&lt;/label&gt;<br>&nbsp;&nbsp;&lt;input class="form-control form-control-lg" type="file" id="formFileMultiple" multiple&gt;<br>&lt;/div&gt;<br></code>
+                    </div>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Default file input example</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                            <input class="form-control form-control-lg" type="file" id="formFileMultiple" multiple>
+                        </div>
+                    </div>
+
+                    <h2><br>Selection</h2>
+                    <div class="row m-0 my-4 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;select class="form-select" aria-label="Default select example"&gt;<br>&nbsp;&nbsp;&lt;option selected&gt;Open this select menu&lt;/option&gt;<br>&nbsp;&nbsp;&lt;option value="1"&gt;One&lt;/option&gt;<br>&nbsp;&nbsp;&lt;option value="2"&gt;Two&lt;/option&gt;<br>&nbsp;&nbsp;&lt;option value="3"&gt;Three&lt;/option&gt;<br>&lt;/select&gt;<br></code>
+                    </div>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <h2><br>Checkboxs</h2>
+                    <div class="row m-0 my-4 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;div class="form-check"&gt;<br>&nbsp;&nbsp;&lt;input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"&gt;<br>&nbsp;&nbsp;&lt;label class="form-check-label" for="flexCheckDefault"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Default checkbox<br>&nbsp;&nbsp;&lt;/label&gt;<br>&lt;/div&gt;<br>&lt;div class="form-check"&gt;<br>&nbsp;&nbsp;&lt;input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked&gt;<br>&nbsp;&nbsp;&lt;label class="form-check-label" for="flexCheckChecked"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Checked checkbox<br>&nbsp;&nbsp;&lt;/label&gt;<br>&lt;/div&gt;<br></code>
+                    </div>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Default checkbox
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Checked checkbox
+                            </label>
+                        </div>
+                    </div>
+
+                    <h2><br>Radios</h2>
+                    <div class="row m-0 my-4 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;div class="form-check"&gt;<br>&nbsp;&nbsp;&lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"&gt;<br>&nbsp;&nbsp;&lt;label class="form-check-label" for="flexRadioDefault1"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Default radio<br>&nbsp;&nbsp;&lt;/label&gt;<br>&lt;/div&gt;<br>&lt;div class="form-check"&gt;<br>&nbsp;&nbsp;&lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked&gt;<br>&nbsp;&nbsp;&lt;label class="form-check-label" for="flexRadioDefault2"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Default checked radio<br>&nbsp;&nbsp;&lt;/label&gt;<br>&lt;/div&gt;<br></code>
+                    </div>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked radio
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="navsTabs" class="row content-span mb-3 p-xxl-5 p-xl-5 p-lg-4 p-md-3 p-sm-3 p-3">
+                    <h1>Navs & Tabs</h1>
+                    <p class="mb-3">สำหรับแทบบาร์ใช้สำหรับการนำทางไปยัง page ต่างๆ หรือ section ต่างๆ ของหน้าเว็บนั้น
+                        ย่อมจะมีในแทบจะทุกๆ เว็บ และ Bootstrap ก็ยังมีเครื่องมือในการจัดการอีกเช่นเคย โดยในการจัดวาง
+                        layout
+                        ของ navigator bar ค่อนข้างจะแตกต่างจากการจัดวาง element ทั่วๆ ไปพอสมควร<br><br>
+                        และสำหรับการกำหนด property ตามชื่อ class ต่างๆ จะมีดังนี้
+                    </p>
+                    <ul>
+                        <li><code>.nav</code> เป็นการกำหนดเพื่อเป็น element tab bar หลัก โดยจะต้องใช้คู่กับ tag
+                            <code>&lt;ul&gt;</code>
+                        </li>
+                        <li><code>.nav-item</code> เป็นการกำหนดตัว element เป็นปุ่มครอบในการนำทาง โดยจะต้องใช้คู่กับ
+                            tag <code>&lt;li&gt;</code></li>
+                        <li><code>.nav-link</code> เป็นการกำหนดให้ตัวข้อความให้สามารถนำทางได้ โดยจะต้องใช้คู่กับ
+                            tag <code>&lt;a&gt;</code></li>
+                        <li><code>.nav-fill</code> เป็นการกำหนดให้ตัวปุ่มภายใน tab bar
+                            มีการกระจายความกว้างของปุ่มให้เท่ากัน</li>
+                        <li><code>.nav-pill</code> เป็นกำหนดให้ตัวปุ่มนำทางมีการขึ้นรูปร่างปุ่มเมื่อสถานะถูกใช้งาน</li>
+                        <li><code>.active</code> เป็นกำหนดให้ปุ่มนั้นมีสถานะการถูก<b>ใช้งาน</b></li>
+                        <li><code>.disabled</code> เป็นกำหนดให้ปุ่มนั้นมีสถานะการถูก<b>ปิดใช้งาน</b></li>
+                    </ul>
+                    <h3>Code:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;ul class="nav"&gt;<br>&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link active" aria-current="page" href="#"&gt;Item1&lt;/a&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link" href="#"&gt;Item2&lt;/a&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link" href="#"&gt;Item3&lt;/a&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Item4&lt;/a&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&lt;/ul&gt;<br></code>
+                    </div>
+                    <h3><br>Result:</h3>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <ul class="nav opacity-100 text-black" style="font-size: .8rem;">
+                            <li class="m-0 nav-item" style="opacity: 1;">
+                                <a class="nav-link active" aria-current="page">Item1</a>
+                            </li>
+                            <li class="m-0 nav-item" style="opacity: 1;">
+                                <a class="nav-link">Item2</a>
+                            </li>
+                            <li class="m-0 nav-item" style="opacity: 1;">
+                                <a class="nav-link">Item3</a>
+                            </li>
+                            <li class="m-0 nav-item" style="opacity: 1;">
+                                <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Item4</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3><br><br>Code:</h3>
+                    <div class="row m-0 p-4 rounded-3 code-span text-white">
+                        <code
+                            class="text-white">&lt;ul class="nav nav-pills nav-fill"&gt;<br>&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link active" aria-current="page" href="#"&gt;Active&lt;/a&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link" href="#"&gt;Much longer nav link&lt;/a&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;<br>&nbsp;&nbsp;&lt;/li&gt;<br>&lt;/ul&gt;<br></code>
+                    </div>
+                    <h3><br>Result:</h3>
+                    <div class="row bg-light rounded mx-0 p-5">
+                        <ul class="nav nav-pills nav-fill" style="font-size: .8rem;">
+                            <li class="nav-item m-0" style="opacity: 1;">
+                                <a class="nav-link active" aria-current="page">Active</a>
+                            </li>
+                            <li class="nav-item m-0" style="opacity: 1;">
+                                <a class="nav-link">Much longer nav link</a>
+                            </li>
+                            <li class="nav-item m-0" style="opacity: 1;">
+                                <a class="nav-link">Link</a>
+                            </li>
+                            <li class="nav-item m-0" style="opacity: 1;">
+                                <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xxl-2 col-xl-1 col-0"></div>
+
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
